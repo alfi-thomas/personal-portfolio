@@ -1,0 +1,566 @@
+:root{
+    --color1: #1d3a42;
+    --color2: #306064;
+    --color3: #dee4de;
+    --color4: #ffffff;
+    --color5: #14262b;
+    --color6: #284247;
+    --color7: rgb(48, 48, 48);
+    --color8: rgb(29, 29, 29);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Labrada:wght@300&family=Roboto+Condensed:wght@300&display=swap');
+
+@keyframes rise {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+#navbar{
+    position: fixed;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    top: 0;
+    height: 12vh;
+    z-index: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    padding-right: 2.5em;
+    justify-content: flex-end;
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, var(--color2) 65%, var(--color1));
+}
+
+.navbar{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: var(--color3);
+    font-size: 1em;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+.navbar a:hover{
+    color: var(--color4);
+}
+
+.azterix {
+    position: absolute; 
+    height: 100%;
+    top: 100%;
+    left: 2em;
+    animation: rise 1s ease-in-out 3s 1 forwards;
+    transition: transform 0.7 ease-in-out, 0.7 ease-in-out;
+}
+
+.azterix:hover{
+    transform: scale(1.03);
+}
+
+/* Welcome Section */
+#welcome-section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(90deg, var(--color8), var(--color7));
+}
+
+#welcome-section h1 {
+    color: var(--color3);
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+#profile-link {
+    text-decoration: none;
+    position: relative;
+    color: var(--color3);
+}
+  
+#profile-link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--color1), var(--color2));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.7s ease-in-out;
+}
+  
+#profile-link:hover::before {
+    transform: scaleX(1);
+}
+
+#profile-link:hover {
+    color: var(--color4);
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+/* Projects */
+#projects{
+    width: 100%;
+    height: 110vh;
+    position: relative;
+    background: linear-gradient(90deg, var(--color5), var(--color6) 75%);
+}
+
+#my-projects{
+    position: absolute;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.5em;
+    color: var(--color4);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    width: fit-content;
+    margin-top: 3em;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#my-projects:hover{
+    cursor: not-allowed; 
+}
+
+#my-projects:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -0.1em;
+    background-color: var(--color3);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.7s ease-in-out;
+}
+
+#my-projects:hover::before {
+    transform: scaleX(1);
+}
+
+.project-flex{
+    margin-bottom: 6.5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 13em 5em;
+}
+
+.project-tile {
+    width: 100%;
+    max-width: 350px;
+    height: 400px;
+    margin-bottom: 1.5em;
+    background-color: #dee4de;
+    border-radius: 2px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, 0.3s ease-in-out;
+  }
+  
+.project-tile:hover {
+    transform: scale(1.1);
+    cursor: url(https://cdn.custom-cursor.com/128/assets/pointers/32/Mickey_Hand_Pointer.png), auto;
+    box-shadow: 1px 1px 10px 1px rgba(11, 15, 20, 0.3);
+    
+}
+
+/* Contact */
+#contact {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(90deg, var(--color7), var(--color8));
+}
+
+.coffee {
+    color: var(--color3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.contact-flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.contact-item{
+    position: relative;
+    margin-top: 23em;
+    object-fit: cover;
+    gap: 2em;
+    width: 3em;
+    filter: invert(90%);
+}
+
+.contact-item:hover{
+    filter: invert(100%);
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Footer */
+footer{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    height: 12vh;
+    bottom: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    padding-right: 2em;
+    padding-left: 2em;
+    justify-content: space-around;
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, var(--color1), var(--color2) 65%);
+}
+
+.footer-text{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color3);
+    font-size: 0.95em;
+    gap: 10em;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+.footer-text:hover{
+    color: var(--color4);
+    cursor: pointer;
+}
+
+/*Responsive*/
+@media only screen and (max-width: 1023px){
+    #navbar{
+        height: 10.1vh;
+        background: linear-gradient(90deg, var(--color2) 45%, var(--color1));
+        padding-right: 1.7em;
+    }
+    .navbar a{
+        font-size: 1.3em;
+    }
+    .azterix{
+        height: 100%;
+        left: 1.3em;
+    }
+    #welcome-section h1{
+        width: 95%;
+        top: 50%;
+        font-size: 2.3em;
+    }
+    #projects{
+        height: fit-content;
+    }
+    #my-projects{
+        margin-top: 2em;
+        font-size: 2.3em;
+    }
+    #my-projects:before{
+        height: 1.3px;
+    }
+    .project-flex{
+        padding: 10em 0.5em 5em 0.5em;
+        gap: 1em;
+        margin-bottom: -0.1em;
+    }
+    .project-tile{
+        max-width: 40em;
+        height: 25em;
+        margin-bottom: 1em;
+    }
+    .project-tile:hover {
+        transform: scale(1.03);
+    }
+    .coffee{
+        top: 40%;
+        width: 95%;
+        font-size: 2.3em;
+    }
+    .contact-flex{
+        gap: 1.3em;
+    }
+    .contact-item{
+        margin-top: 22em;
+        width: 2.5em;
+    }
+    footer{
+        height: 11vh;
+        padding-right: 0.8em;
+        padding-left: 0.8em;
+        align-items: center;
+        box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(90deg, var(--color1), var(--color2) 65%);
+    }
+    .footer-text{
+        display: block;
+        text-align: center;
+        font-size: 1em;
+        line-height: 1.2em;
+    }
+    .footer-text li:nth-of-type(1){
+        margin-bottom: 0.7em;
+    }
+
+}
+
+ @media only screen and (max-width: 768px) {
+    #navbar{
+        height: 9.9vh;
+        background: linear-gradient(90deg, var(--color2) 45%, var(--color1));
+        padding-right: 1.5em;
+    }
+    .navbar a{
+        font-size: 1.1em;
+    }
+    .azterix{
+        height: 100%;
+        left: 1.1em;
+    }
+    #welcome-section h1{
+        width: 95%;
+        top: 50%;
+        font-size: 2em;
+    }
+    #projects{
+        height: fit-content;
+    }
+    #my-projects{
+        margin-top: 2em;
+        font-size: 2em;
+    }
+    #my-projects:before{
+        height: 1.3px;
+    }
+    .project-flex{
+        padding: 8em 0.5em 4em 0.5em;
+        gap: 1em;
+        margin-bottom: -0.1em;
+    }
+    .project-tile{
+        max-width: 35em;
+        height: 20em;
+        margin-bottom: 1em;
+    }
+    .project-tile:hover {
+        transform: scale(1.03);
+    }
+    .coffee{
+        top: 40%;
+        width: 95%;
+        font-size: 2em;
+    }
+    .contact-flex{
+        gap: 1.3em;
+    }
+    .contact-item{
+        margin-top: 22em;
+        width: 2.3em;
+    }
+    footer{
+        height: 10vh;
+        padding-right: 0.7em;
+        padding-left: 0.7em;
+        align-items: center;
+        box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(90deg, var(--color1), var(--color2) 65%);
+    }
+    .footer-text{
+        display: block;
+        text-align: center;
+        font-size: 0.9em;
+        line-height: 1.2em;
+    }
+    .footer-text li:nth-of-type(1){
+        margin-bottom: 1em;
+    }
+ }
+
+ @media only screen and (max-width: 480px) {
+    #navbar{
+        height: 9.7vh;
+        background: linear-gradient(90deg, var(--color2) 45%, var(--color1));
+    }
+    .navbar a{
+        font-size: 0em;
+    }
+    .azterix{
+        height: 100%;
+        left: 0.9em;
+    }
+    #welcome-section h1{
+        width: 95%;
+        top: 50%;
+        font-size: 1.7em;
+    }
+    #projects{
+        height: fit-content;
+    }
+    #my-projects{
+        margin-top: 2em;
+        font-size: 1.7em;
+    }
+    #my-projects:before{
+        height: 1.3px;
+    }
+    .project-flex{
+        padding: 8em 0.5em 4em 0.5em;
+        gap: 1em;
+        margin-bottom: -0.1em;
+    }
+    .project-tile{
+        max-width: 30em;
+        height: 15em;
+        margin-bottom: 1em;
+    }
+    .project-tile:hover {
+        transform: scale(1.03);
+    }
+    .coffee{
+        top: 40%;
+        width: 95%;
+        font-size: 1.7em;
+    }
+    .contact-flex{
+        gap: 1em;
+    }
+    .contact-item{
+        margin-top: 23em;
+        width: 2.3em;
+    }
+    footer{
+        height: 9vh;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+        align-items: center;
+        box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(90deg, var(--color1), var(--color2) 65%);
+    }
+    .footer-text{
+        display: block;
+        text-align: center;
+        font-size: 0.7em;
+        line-height: 1.2em;
+    }
+    .footer-text li:nth-of-type(1){
+        margin-bottom: 1.3em;
+    }
+ }
+
+ @media only screen and (max-width: 360px) {
+    #navbar{
+        height: 9.5vh;
+        background: linear-gradient(90deg, var(--color2) 45%, var(--color1));
+    }
+    .navbar a{
+        font-size: 0em;
+    }
+    .azterix{
+        height: 100%;
+        left: 0.7em;
+    }
+    #welcome-section h1{
+        width: 95%;
+        top: 50%;
+        font-size: 1.5em;
+    }
+    #projects{
+        height: fit-content;
+    }
+    #my-projects{
+        margin-top: 2em;
+        font-size: 1.5em;
+    }
+    #my-projects:before{
+        height: 1px;
+    }
+    .project-flex{
+        margin-bottom: -0.1em;
+        gap: 1em;
+    }
+    .project-tile{
+        max-width: 300px;
+        height: 200px;
+        margin-bottom: 1em;
+    }
+    .project-tile:hover {
+        transform: scale(1.03);
+    }
+    .coffee{
+        top: 40%;
+        width: 95%;
+        font-size: 1.5em;
+    }
+    .contact-flex{
+        gap: 1em;
+    }
+    .contact-item{
+        margin-top: 22em;
+        width: 2em;
+    }
+    footer{
+        height: 9vh;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+        align-items: center;
+        box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(90deg, var(--color1), var(--color2) 65%);
+    }
+    .footer-text{
+        display: block;
+        text-align: center;
+        font-size: 0.60em;
+        line-height: 1.2em;
+    }
+    .footer-text li:nth-of-type(1){
+        margin-bottom: 1.5em;
+    }
+}
