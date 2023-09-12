@@ -281,12 +281,12 @@ footer{
 /*Responsive*/
 @media only screen and (max-width: 1024px){
   #navbar{
-      height: 10.1vh;
+      height: 70px;
       background: linear-gradient(90deg, var(--color2) 45%, var(--color1));
       padding-right: 1.7em;
   }
   .navbar a{
-      font-size: 1.3em;
+      font-size: 1em;
   }
   .azterix{
       height: 100%;
@@ -294,27 +294,27 @@ footer{
   }
   #welcome-section h1{
       width: 95%;
-      top: 50%;
-      font-size: 2.3em;
+      top:55%;
+      font-size: 30px;
   }
   #projects{
       height: fit-content;
   }
   #my-projects{
       margin-top: 3.5em;
-      font-size: 2.3em;
+      font-size: 30px;
   }
   #my-projects:before{
       height: 1.3px;
   }
   .project-flex{
-      padding: 14.5em 0.5em 5em 0.5em;
+      padding: 12em 0.5em 5em 0.5em;
       gap: 1em;
       margin-bottom: -0.1em;
   }
   .project-tile{
-      max-width: 40em;
-      height: 25em;
+      max-width: 300px;
+      height: 400px;
       margin-bottom: 1em;
   }
   .project-tile:hover {
@@ -323,17 +323,17 @@ footer{
   .coffee{
       top: 40%;
       width: 95%;
-      font-size: 2.3em;
+      font-size: 30px;
   }
   .contact-flex{
       gap: 1.3em;
   }
   .contact-item{
-      margin-top: 22em;
+      margin-top: 210px;
       width: 2.5em;
   }
   footer{
-      height: 11vh;
+      height: 60px;
       padding-right: 0.8em;
       padding-left: 0.8em;
       align-items: center;
@@ -343,11 +343,12 @@ footer{
   .footer-text{
       display: block;
       text-align: center;
-      font-size: 1em;
+      font-size: 12px;
+      font-weight: 100;
       line-height: 1.2em;
   }
   .footer-text li:nth-of-type(1){
-      margin-bottom: 0.7em;
+      margin-bottom: 3px;
   }
 
 }
@@ -543,7 +544,7 @@ footer{
       gap: 1em;
   }
   .contact-item{
-      margin-top: 22em;
+      margin-top: 230px;
       width: 2em;
   }
   footer{
@@ -557,10 +558,10 @@ footer{
   .footer-text{
       display: block;
       text-align: center;
-      font-size: 0.60em;
+      font-size: 0.50em;
       line-height: 1.2em;
   }
   .footer-text li:nth-of-type(1){
-      margin-bottom: 1.5em;
+      margin-bottom: 0.5em;
   }
 }
